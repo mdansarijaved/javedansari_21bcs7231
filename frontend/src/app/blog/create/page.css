@@ -71,12 +71,12 @@ textarea#blog-textarea {
 }
 .blogButton:hover,
 .previewButton:hover {
-  background-color: #2563eb; 
+  background-color: #ca086a; 
   transition: background-color 0.2s; 
 }
 
 .blogButton{
-    background-color: #3b82f6;
+    background-color: #c70880;
     color: white;
     border: none;
     border-radius: 5px;
@@ -88,12 +88,12 @@ textarea#blog-textarea {
 }
 
 .previewButton{
-    background-color: #3b82f6;
+    background-color: #c70880;
 }
 
 .previewButton--inverted {
     background-color: #121318;
-    outline: 2px solid #3b82f6;
+    outline: 2px solid #c70880;
 }
 
 .createTag{

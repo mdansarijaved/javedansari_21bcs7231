@@ -7,6 +7,9 @@
 }
 .logo{
     font-size: 30px;
+    background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
 }
 .main-nav{
     width: 100%;
@@ -43,7 +46,7 @@ ul, ol{
 }
 
 .navButton{
-    background-color: #3b82f6;
+    background-color: #c70880;
     padding-inline: 20px;
     padding-block: 10px;
     border-radius: 10px;
@@ -56,11 +59,11 @@ ul, ol{
 }
 .loginButton:hover,
 .navButton:hover {
-  background-color: #2563eb; 
+  background-color: #ca086a; 
   transition: background-color 0.2s; 
-}
+}   
 .loginButton{
-    background-color: #3b82f6;
+    background-color: #c70880;
     padding-inline: 20px;
     padding-block: 10px;
     border-radius: 10px;
@@ -69,6 +72,19 @@ ul, ol{
 }
 
 .hoverText:hover{
-    color: #3b82f6;
+    color: #c70880;
     transition: color 0.2s;
+}
+
+.hero-section{
+    display: flex;
+    height: 500px;
+    justify-content: center;
+    align-items: center;    
+    font-size: 3rem;
+    font-weight: 100;   
+    background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
 }

@@ -37,6 +37,11 @@ export default function Home() {
           </Link>
         </div>
       </nav>
+      <section className="hero-section">
+        <h1>
+          Tell your story to the world. 
+        </h1>
+      </section>
     </main>
   );
 }
