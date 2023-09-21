@@ -8,8 +8,12 @@
 .main{
     padding-inline: 6rem;
     padding-block: 2rem;
-    min-height: 100vh;
+}
 
+.form-handle{
+    height: 100%;
+    width: 100%;
+   
 }
 
 
@@ -20,6 +24,29 @@
   
 }
 
+textarea#blog-textarea {
+    width: 100%;
+    outline: none;
+    height: 500px;
+    font-size: 1.2rem;
+    resize: none;
+    margin-block: 20px; /* Prevent resizing of textarea */
+    border: 2px solid gray;
+    padding: 20px; /* Add padding to textarea */
+    box-sizing: border-box; /* Include padding in the total height */
+    font-size: 16px; /* Adjust the font size as needed */
+    font-family: Arial, sans-serif; /* Use a suitable font-family */
+}
+
+.Markdown-Div{
+    margin: 30px;
+}
+
+.buttons{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
 .blogButton{
     background-color: #008080;
     color: white;
@@ -32,8 +59,7 @@
 }
 
 .previewButton{
-    background-color: white;
-    color: black;
+    background-color: #008080;
 }
 
 .createTag{

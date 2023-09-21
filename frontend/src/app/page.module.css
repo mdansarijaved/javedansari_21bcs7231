@@ -5,7 +5,9 @@
   align-items: center;
   padding-inline: 6rem;
   padding-block: 2rem;
-  min-height: 100vh;
+  height: 100vh;
+  background-color: #020100;
+
 }
 
 .description {

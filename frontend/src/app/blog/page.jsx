@@ -6,13 +6,19 @@ import ReactMarkdown from 'react-markdown'
 
 const Create = () => {
     const [markdownDisplay, setMarkdownDisplay] = useState('')
+    const [showPreview, setShowPreview] = useState(false);
+
     const markdown = useRef();
 
     function handleSubmit(e) {
         e.preventDefault();
 
         setMarkdownDisplay(markdown.current.value)
+        markdown.current.style.display = 'none';
+        setShowPreview(true);
     }
+
+
 
     return (
         <>
@@ -24,21 +30,29 @@ const Create = () => {
                         <button className='blogButton'>
                             Publish
                         </button>
-                        <button className='blogButton previewButton'>
-                            Preview
-                        </button>
-                    </div>
+                        {showPreview ? (
+                            <button onClick={()=>{
+                                markdown.current.style.display = 'block'
+                                setShowPreview(false);
+                                setMarkdownDisplay('')
+                            }} className='blogButton previewButton'>
+                                Go Back
+                            </button>
+                        ) : (
+                            <button onClick={handleSubmit} className='blogButton previewButton'>
+                                Preview
+                            </button>
+                        )}                    </div>
                 </nav>
+                <textarea id='blog-textarea' placeholder='Tell your story to the world' ref={markdown}></textarea>
+                {/* <PageContent /> */}
+                <div style={{ display: markdownDisplay ? 'block' : 'none' }} className='Markdown-Div'>
 
-                <form onSubmit={handleSubmit}>
-                    <textarea name="text-area" id="" cols="30" rows="10" ref={markdown}></textarea>
-                    {/* <PageContent /> */}
-
-                    <button type='submit'>Submit</button>
-                </form>
-                <ReactMarkdown>
-                    {markdownDisplay}
-                </ReactMarkdown>
+                    <ReactMarkdown>
+                        {markdownDisplay}
+                    </ReactMarkdown>
+                   
+                </div>
             </div>
 
         </>
