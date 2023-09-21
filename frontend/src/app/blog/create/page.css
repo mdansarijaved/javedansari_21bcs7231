@@ -29,7 +29,7 @@ textarea#blog-titlearea::placeholder{
     font-weight: 500;
 }
 
-textarea#blog-titlearea {
+input#blog-titlearea {
     width: 100%;
     outline: none;
     height: 100px;
