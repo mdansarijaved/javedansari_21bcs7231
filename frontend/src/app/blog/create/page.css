@@ -34,7 +34,7 @@ textarea#blog-titlearea {
     outline: none;
     height: 100px;
     resize: none;
-    margin-block: 20px; /* Prevent resizing of textarea */
+    margin: 40px  0px 20px 0px; /* Prevent resizing of textarea */
     border: 2px solid gray;
     padding: 20px; /* Add padding to textarea */
     box-sizing: border-box; /* Include padding in the total height */
