@@ -1,9 +1,9 @@
 const ProtectedRoute = ({ children }) => {
-    const uid = useSelector((state) => state.user.uid); // Replace with your Redux state selector
+    const user = useSelector((state) => state.user); // Replace with your Redux state selector
     const router = useRouter();
   
     // Check if user data exists
-    if (!uid) {
+    if (!user.uid || user.error) {
       // Redirect to the login page
       router.push('/login');
       return null; // Return null to prevent rendering of the protected content
