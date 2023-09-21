@@ -67,3 +67,8 @@ ul, ol{
     color: white;
 
 }
+
+.hoverText:hover{
+    color: #3b82f6;
+    transition: color 0.2s;
+}

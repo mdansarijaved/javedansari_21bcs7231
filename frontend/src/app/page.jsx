@@ -11,18 +11,18 @@ export default function Home() {
         <h1 className="logo">YourBlog</h1>
         <ul className="nav-list">
           <li>
-            <Link className="navlistText" href="/">
+            <Link className="navlistText hoverText" href="/">
               Home
             </Link>
           </li>
           <li>
-            <Link className="navlistText" href="/">
+            <Link className="navlistText hoverText" href="/">
               Feed
             </Link>
           </li>
           <div className="divider"></div>
           <li>
-            <Link className="navlistText navButton" href="/blog/create">
+            <Link className="navlistText navButton no-underline-hover" href="/blog/create">
               Create +
             </Link>
           </li>
@@ -32,7 +32,7 @@ export default function Home() {
           <Link className="navtext loginButton" href="/login">
             Login
           </Link>
-          <Link className="navtext" href="/blog/myblogs">
+          <Link className="navtext hoverText" href="/blog/myblogs">
             My blogs
           </Link>
         </div>
