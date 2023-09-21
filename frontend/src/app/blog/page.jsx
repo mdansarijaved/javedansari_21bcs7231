@@ -21,41 +21,41 @@ const Create = () => {
 
 
     return (
-        <>
-            <div className='main'>
-                <nav className='navCreate'>
-                    <h1 className='logo'>YourBlog</h1>
-                    <h2 className='createTag'>Wrtie your story.</h2>
-                    <div className='buttons'>
-                        <button className='blogButton'>
-                            Publish
+        <div className='main'>
+            <nav className='navCreate'>
+                <h1 className='logo'>YourBlog</h1>
+                <h2 className='createTag'>Wrtie your story.</h2>
+                <div className='buttons'>
+                    <button className='blogButton'>
+                        Publish
+                    </button>
+                    {showPreview ? (
+                        <button onClick={() => {
+                            markdown.current.style.display = 'block'
+                            setShowPreview(false);
+                            setMarkdownDisplay('')
+                        }} className='blogButton previewButton previewButton--inverted'>
+                            Go Back
                         </button>
-                        {showPreview ? (
-                            <button onClick={()=>{
-                                markdown.current.style.display = 'block'
-                                setShowPreview(false);
-                                setMarkdownDisplay('')
-                            }} className='blogButton previewButton'>
-                                Go Back
-                            </button>
-                        ) : (
-                            <button onClick={handleSubmit} className='blogButton previewButton'>
-                                Preview
-                            </button>
-                        )}                    </div>
-                </nav>
-                <textarea id='blog-textarea' placeholder='Tell your story to the world' ref={markdown}></textarea>
-                {/* <PageContent /> */}
-                <div style={{ display: markdownDisplay ? 'block' : 'none' }} className='Markdown-Div'>
+                    ) : (
+                        <button
+                            onClick={handleSubmit}
+                            className={`blogButton previewButton`}
+                        >
+                            Preview
+                        </button>
+                    )}                    </div>
+            </nav>
+            <textarea id='blog-textarea' placeholder='Tell your story to the world' ref={markdown}></textarea>
+            {/* <PageContent /> */}
+            <div style={{ display: markdownDisplay ? 'block' : 'none' }} className='Markdown-Div'>
 
-                    <ReactMarkdown>
-                        {markdownDisplay}
-                    </ReactMarkdown>
-                   
-                </div>
+                <ReactMarkdown>
+                    {markdownDisplay}
+                </ReactMarkdown>
+
             </div>
-
-        </>
+        </div>
     )
 }
 

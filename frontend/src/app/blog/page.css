@@ -48,12 +48,14 @@ textarea#blog-textarea {
     gap: 20px;
     align-items: center;
 }
+
 .blogButton{
     background-color: #3b82f6;
     color: white;
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    width: 90px;
+    padding: 10px 0;
     cursor: pointer;
     font-size: 16px;
   
@@ -61,6 +63,11 @@ textarea#blog-textarea {
 
 .previewButton{
     background-color: #3b82f6;
+}
+
+.previewButton--inverted {
+    background-color: #121318;
+    outline: 2px solid #3b82f6;
 }
 
 .createTag{
