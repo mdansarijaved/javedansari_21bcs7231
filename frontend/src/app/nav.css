@@ -69,6 +69,6 @@ ul, ol{
 }
 
 .hoverText:hover{
-    color: #3b82f6;
+    color: #2563eb;
     transition: color 0.2s;
 }
