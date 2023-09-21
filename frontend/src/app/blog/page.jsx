@@ -1,5 +1,7 @@
 import React from 'react'
 import './page.css'
+import ReactMarkdown from 'react-markdown'
+const markdown = `Just a link: https://reactjs.com.`
 
 const Create = () => {
     return (
@@ -19,8 +21,8 @@ const Create = () => {
             </nav>
 
             <main>
-                
-            </main>
+            <ReactMarkdown children={markdown} />
+                </main>
         </div>
 
         
