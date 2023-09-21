@@ -3,19 +3,40 @@ import React from 'react'
 import { useState, useEffect, useRef } from 'react'
 import './page.css'
 import ReactMarkdown from 'react-markdown'
+import { useAddPostsMutation } from '@/store/posts'
+import { useSelector } from 'react-redux'
+import { useRouter } from 'next/navigation'
 
 const BlogCreate = () => {
+    const router = useRouter();
+    const [addPost] = useAddPostsMutation();
+    const user = useSelector(state => state.user);
     const [markdownDisplay, setMarkdownDisplay] = useState('')
     const [showPreview, setShowPreview] = useState(false);
 
     const markdown = useRef();
 
-    function handleSubmit(e) {
+    function handleShowPreview(e) {
         e.preventDefault();
 
         setMarkdownDisplay(markdown.current.value)
         markdown.current.style.display = 'none';
         setShowPreview(true);
+    }
+
+    function handlePublish(e) {
+        e.preventDefault();
+
+        addPost({
+            uid: user.uid,
+            title: 'Test',
+            content: markdown.current.value,
+        })
+            .unwrap()
+            .then((res) => {
+                // TODO: Redirect to posted blog
+                router.push('/')
+            })
     }
 
     return (
@@ -24,7 +45,7 @@ const BlogCreate = () => {
                 <h1 className='logo'>YourBlog</h1>
                 <h2 className='createTag'>Wrtie your story.</h2>
                 <div className='buttons'>
-                    <button className='blogButton'>
+                    <button className='blogButton' onClick={handlePublish}>
                         Publish
                     </button>
                     {showPreview ? (
@@ -37,7 +58,7 @@ const BlogCreate = () => {
                         </button>
                     ) : (
                         <button
-                            onClick={handleSubmit}
+                            onClick={handleShowPreview}
                             className={`blogButton previewButton`}
                         >
                             Preview

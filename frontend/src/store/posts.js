@@ -10,9 +10,24 @@ export const postsApi = createApi({
         getPosts: builder.query({
             query: '/posts/',
         }),
+        addPosts: builder.mutation({
+            query: ({ uid, content, title }) => ({
+                url: '/posts/',
+                body: {
+                    'create_by': uid,
+                    'title': title,
+                    'content': content,
+                },
+                method: 'POST'
+            })
+            
+        })
     }),
 })
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { useGetPostsQuery } = postsApi
+export const { 
+    useGetPostsQuery,
+    useAddPostsMutation, 
+} = postsApi
