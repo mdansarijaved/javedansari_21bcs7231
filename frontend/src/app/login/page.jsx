@@ -38,7 +38,7 @@ const page = () => {
             Sign in to your account
           </p>
           <div className="inputdiv">
-            <input type="email" placeholder="Email or Username" className="input" />
+            <input type="text" placeholder="Email or Username" className="input" ref={uidRef}/>
           </div>
           <div className="inputdiv">
             <input type="password" placeholder="Password" className="input" ref={passwordRef}/>

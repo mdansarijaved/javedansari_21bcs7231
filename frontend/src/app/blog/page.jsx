@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react'
 import './page.css'
 import ReactMarkdown from 'react-markdown'
 
-const Create = () => {
+const BlogCreate = () => {
     const [markdownDisplay, setMarkdownDisplay] = useState('')
     const [showPreview, setShowPreview] = useState(false);
 
@@ -17,8 +17,6 @@ const Create = () => {
         markdown.current.style.display = 'none';
         setShowPreview(true);
     }
-
-
 
     return (
         <div className='main'>
@@ -59,5 +57,4 @@ const Create = () => {
     )
 }
 
-export default Create
-
+export default BlogCreate
