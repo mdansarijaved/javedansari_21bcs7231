@@ -20,13 +20,6 @@ const page = () => {
           <div>
             <button className="buttons">Continue</button>
           </div>
-          <p>OR</p>
-          <div>
-            <button className="buttons">Continue with Facebook</button>
-          </div>
-          <div>
-            <button className="buttons">Continue with Google</button>
-          </div>
 
           <div className="inputradio">
             <input type="checkbox" name="" id="" />
