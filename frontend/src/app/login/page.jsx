@@ -1,10 +1,36 @@
-import React from 'react'
+'use client'
+import React, { useRef, useEffect, useState } from 'react'
 import './login.css'
+import { useDispatch, useSelector } from 'react-redux';
+import { login } from '@/store/user';
+import { useRouter } from 'next/navigation';
 
 const page = () => {
+  const [newlySubmitted, setNewlySubmitted] = useState(false);
+  const user = useSelector((state) => state.user)
+  const dispatch = useDispatch();
+  const router = useRouter();
+  const uidRef = useRef()
+  const passwordRef = useRef()
+  
+  useEffect(() => {
+    if (user?.uid && !user.error && newlySubmitted) router.push('/')
+  }, [user, newlySubmitted])
+
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    dispatch(login({
+      uid: uidRef.current.value,
+      password: passwordRef.current.value,
+    }))
+
+    setNewlySubmitted(true)
+  }
+
   return (
     <>
-      <section className="main">
+      <form className="main" onSubmit={handleSubmit}>
         <div className="main-container">
 
           <h1 className="intro-text">Hello 👋</h1>
@@ -12,13 +38,19 @@ const page = () => {
             Sign in to your account
           </p>
           <div className="inputdiv">
-            <input type="email" placeholder="Email or Username" className="input" />
+            <input placeholder="UID" className="input" ref={uidRef}/>
           </div>
           <div className="inputdiv">
-            <input type="password" placeholder="Password" className="input" />
+            <input type="password" placeholder="Password" className="input" ref={passwordRef}/>
           </div>
           <div>
-            <button className="buttons">Continue</button>
+            {user.error == 'PASSWORD_MISMATCH' && 
+              <span> Password Mismatch </span>
+            }
+            {user.error == 'INVALID_UID' && 
+              <span> Invalid Uid </span>
+            }
+            <button className="buttons" type='submit'>Continue</button>
           </div>
 
           <div className="inputradio">
@@ -27,7 +59,7 @@ const page = () => {
           </div>
 
         </div>
-      </section>
+      </form>
     </>
   );
 };
