@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <nav className="main-nav">
-        <h1>YourBlog</h1>
+        <h1 className="logo">YourBlog</h1>
         <ul className="nav-list">
           <li>
             <Link className="navlistText" href="/">
@@ -29,7 +29,7 @@ export default function Home() {
         </ul>
         <div className="nav-login">
           <Bell />
-          <Link className="navtext loginButton" href="/">
+          <Link className="navtext loginButton" href="/login">
             Login
           </Link>
           <Link className="navtext" href="/">

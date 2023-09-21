@@ -4,7 +4,9 @@
     color: black;
     text-decoration: none;
 }
-
+.logo{
+    font-size: 30px;
+}
 .main-nav{
     width: 100%;
     display: flex;
@@ -40,15 +42,20 @@ ul, ol{
 }
 
 .navButton{
-    background-color: #2563eb;
+    background-color: #008080;
     padding-inline: 20px;
     padding-block: 10px;
     border-radius: 10px;
     color: white; 
 }
 
+.buttons{
+    display: flex;
+    gap: 1rem;
+}
+
 .loginButton{
-    background-color: #2563eb;
+    background-color: #008080;
     padding-inline: 20px;
     padding-block: 10px;
     border-radius: 10px;
