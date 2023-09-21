@@ -44,6 +44,12 @@ const page = () => {
             <input type="password" placeholder="Password" className="input" ref={passwordRef}/>
           </div>
           <div>
+            {user.error == 'PASSWORD_MISMATCH' &&
+              <span> Password Mismatch </span>
+            }
+            {user.error == 'INVALID_UID' &&
+              <span> UID not vaild! </span>
+            }
             <button className="button-submit">Continue</button>
           </div>
 
