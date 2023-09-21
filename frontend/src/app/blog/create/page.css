@@ -47,11 +47,6 @@ textarea#blog-textarea {
     display: flex;
     gap: 20px;
     align-items: center;
-    .blogButton:hover,
-    .previewButton:hover {
-     background-color: #2563eb;
-     transition: background-color 0.2s;
-}
 }
 .blogButton,
 .previewButton {

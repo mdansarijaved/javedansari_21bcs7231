@@ -22,7 +22,7 @@ export default function Home() {
           </li>
           <div className="divider"></div>
           <li>
-            <Link className="navlistText navButton" href="/blog">
+            <Link className="navlistText navButton" href="/blog/create">
               Create +
             </Link>
           </li>
@@ -32,8 +32,8 @@ export default function Home() {
           <Link className="navtext loginButton" href="/login">
             Login
           </Link>
-          <Link className="navtext" href="/">
-            Register
+          <Link className="navtext" href="/blog/myblogs">
+            My blogs
           </Link>
         </div>
       </nav>
