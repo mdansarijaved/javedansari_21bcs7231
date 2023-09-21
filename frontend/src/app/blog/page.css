@@ -1,7 +1,8 @@
 *{
     margin: 0;
     padding: 0;
-    color: black;
+    color: white;
+    background-color: #121318;
     text-decoration: none;
 }
 
@@ -48,7 +49,7 @@ textarea#blog-textarea {
     align-items: center;
 }
 .blogButton{
-    background-color: #008080;
+    background-color: #3b82f6;
     color: white;
     border: none;
     border-radius: 5px;
@@ -59,7 +60,7 @@ textarea#blog-textarea {
 }
 
 .previewButton{
-    background-color: #008080;
+    background-color: #3b82f6;
 }
 
 .createTag{

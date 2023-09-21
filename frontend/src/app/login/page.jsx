@@ -12,14 +12,14 @@ const page = () => {
             Sign in to your account
           </p>
           <div className="inputdiv">
-            <input type="email" placeholder="Email or Username" className="input" />
+            <input type="email" placeholder="Enter your student mail" className="input" />
           </div>
           <div className="inputdiv">
             <input type="password" placeholder="Password" className="input" />
           </div>
-          <div>
-            <button className="buttons">Continue</button>
-          </div>
+          
+          <button className='button-submit'>Submit</button>
+          
 
           <div className="inputradio">
             <input type="checkbox" name="" id="" />
