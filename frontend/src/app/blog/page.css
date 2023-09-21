@@ -48,6 +48,15 @@ textarea#blog-textarea {
     gap: 20px;
     align-items: center;
 }
+.blogButton,
+.previewButton {
+  padding: 10px 20px;
+}
+.blogButton:hover,
+.previewButton:hover {
+  background-color: #2563eb; 
+  transition: background-color 0.2s; 
+}
 
 .blogButton{
     background-color: #3b82f6;
