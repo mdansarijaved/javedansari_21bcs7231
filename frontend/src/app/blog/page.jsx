@@ -43,6 +43,7 @@ const BlogCreate = () => {
         <div className='main'>
             <nav className='navCreate'>
                 <h1 className='logo'>YourBlog</h1>
+                <br />
                 <h2 className='createTag'>Wrtie your story.</h2>
                 <div className='buttons'>
                     <button className='blogButton' onClick={handlePublish}>
