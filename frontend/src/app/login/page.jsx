@@ -44,7 +44,7 @@ const page = () => {
             <input type="password" placeholder="Password" className="input" ref={passwordRef}/>
           </div>
           <div>
-            <button className="buttons">Continue</button>
+            <button className="button-submit">Continue</button>
           </div>
 
           <div className="inputradio">
