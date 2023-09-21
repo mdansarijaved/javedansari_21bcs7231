@@ -24,7 +24,24 @@
     align-items: center;
   
 }
+textarea#blog-titlearea::placeholder{
+    font-size: 3rem;
+    font-weight: 500;
+}
 
+textarea#blog-titlearea {
+    width: 100%;
+    outline: none;
+    height: 100px;
+    resize: none;
+    margin: 40px  0px 20px 0px; /* Prevent resizing of textarea */
+    border: 2px solid gray;
+    padding: 20px; /* Add padding to textarea */
+    box-sizing: border-box; /* Include padding in the total height */
+    font-size: 3rem; /* Adjust the font size as needed */
+    font-weight: 300;
+    font-family: Arial, sans-serif; /* Use a suitable font-family */
+}
 textarea#blog-textarea {
     width: 100%;
     outline: none;

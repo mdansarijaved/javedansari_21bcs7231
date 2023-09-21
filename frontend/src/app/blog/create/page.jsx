@@ -65,6 +65,7 @@ const BlogCreate = () => {
                         </button>
                     )}                    </div>
             </nav>
+            <textarea id='blog-titlearea' placeholder='Add title ' ref={markdown}></textarea>
             <textarea id='blog-textarea' placeholder='Tell your story to the world' ref={markdown}></textarea>
             {/* <PageContent /> */}
             <div style={{ display: markdownDisplay ? 'block' : 'none' }} className='Markdown-Div'>
