@@ -15,6 +15,7 @@ const BlogCreate = () => {
     const [showPreview, setShowPreview] = useState(false);
 
     const markdown = useRef();
+    const titleRef = useRef();
 
     function handleShowPreview(e) {
         e.preventDefault();
@@ -29,7 +30,7 @@ const BlogCreate = () => {
 
         addPost({
             uid: user.uid,
-            title: 'Test',
+            title: titleRef.current.value,
             content: markdown.current.value,
         })
             .unwrap()
@@ -65,7 +66,7 @@ const BlogCreate = () => {
                         </button>
                     )}                    </div>
             </nav>
-            <textarea id='blog-titlearea' placeholder='Add title ' ref={markdown}></textarea>
+            <input id='blog-titlearea' placeholder='Add title' ref={titleRef}></input>
             <textarea id='blog-textarea' placeholder='Tell your story to the world' ref={markdown}></textarea>
             {/* <PageContent /> */}
             <div style={{ display: markdownDisplay ? 'block' : 'none' }} className='Markdown-Div'>
