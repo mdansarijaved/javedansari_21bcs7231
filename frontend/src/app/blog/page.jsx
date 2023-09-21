@@ -1,12 +1,18 @@
 'use client'
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import './page.css'
 import ReactMarkdown from 'react-markdown'
-const markdown = `##Just a link: https://reactjs.com.`
 
 const Create = () => {
-    const [text, setText] = useState('')
+    const [markdownDisplay, setMarkdownDisplay] = useState('')
+    const markdown = useRef();
+
+    function handleSubmit(e) {
+        e.preventDefault();
+
+        setMarkdownDisplay(markdown.current.value)
+    }
 
     return (
         <>
@@ -24,12 +30,16 @@ const Create = () => {
                     </div>
                 </nav>
 
-                <main>
-                    <textarea name="text-area" id="" cols="30" rows="10"></textarea>
+                <form onSubmit={handleSubmit}>
+                    <textarea name="text-area" id="" cols="30" rows="10" ref={markdown}></textarea>
                     {/* <PageContent /> */}
-                </main>
-            </div>
 
+                    <button type='submit'>Submit</button>
+                </form>
+                <ReactMarkdown>
+                    {markdownDisplay}
+                </ReactMarkdown>
+            </div>
 
         </>
     )
@@ -37,19 +47,3 @@ const Create = () => {
 
 export default Create
 
-
-const PageContent = () => {
-    const [content, setContent] = useState('')
-
-    useEffect(() => {
-        fetch("README.md")
-            .then((res) => res.text())
-            .then((text) => setContent(text))
-    }, [])
-
-    return (
-        <div>
-            <ReactMarkdown children={content} />
-        </div>
-    )
-}
