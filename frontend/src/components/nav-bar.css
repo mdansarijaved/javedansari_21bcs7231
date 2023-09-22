@@ -248,6 +248,13 @@ ol {
   align-items: center;
   border-radius: 10px;  
 }
+
+.navbutton{
+  background: initial;
+  border: initial;
+  color: initial;
+}
+
 .text-svg-container{
   display: flex;
   flex-direction: column;

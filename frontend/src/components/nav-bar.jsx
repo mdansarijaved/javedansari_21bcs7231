@@ -7,6 +7,10 @@ import './nav-bar.css'
 const Nav = () => {
     const user = useUser();
     console.log(user);
+    const handleLogout = () => {
+      
+    };
+
     return (
       <nav className="main-nav">
         <h1 className="logo">Reflectify</h1>
@@ -41,6 +45,7 @@ const Nav = () => {
             <Link className="navtext hoverText" href="/blog/myblogs">
              My blogs
             </Link>
+            <button onClick={handleLogout} className="navbutton loginButton">Log out</button>
             </>
           ) : (
             <Link className="navtext loginButton" href="/login">
