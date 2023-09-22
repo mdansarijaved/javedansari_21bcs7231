@@ -8,7 +8,9 @@ export const postsApi = createApi({
     }),
     endpoints: (builder) => ({
         getPosts: builder.query({
-            query: '/posts/',
+            query: () => ({
+                url: '/posts/',
+            })
         }),
         addPosts: builder.mutation({
             query: ({ uid, content, title }) => ({
@@ -21,6 +23,17 @@ export const postsApi = createApi({
                 method: 'POST'
             })
             
+        }),
+        getPostById: builder.query({
+            query: ({ id }) => ({
+                url: `/posts/${id}/`
+            })
+        }),
+        deletePost: builder.query({
+            query: ({ id }) => ({
+                url: `/posts/${id}/`,
+                method: 'DELETE',
+            })
         })
     }),
 })
@@ -29,5 +42,7 @@ export const postsApi = createApi({
 // auto-generated based on the defined endpoints
 export const { 
     useGetPostsQuery,
-    useAddPostsMutation, 
+    useGetPostByIdQuery,
+    useAddPostsMutation,
+    useDeletePostQuery,
 } = postsApi
