@@ -3,6 +3,10 @@
   padding: 0;
   color: white;
   text-decoration: none;
+
+}
+.main{
+  background-color: #121318;
 }
 .logo {
   font-size: 30px;
@@ -13,7 +17,7 @@
 .main-nav {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 2px;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -82,7 +86,6 @@ ol {
 .hero-section {
   position: relative;
   display: flex;
-
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -212,9 +215,8 @@ ol {
 }
 .peepsvg {
   position: absolute;
-  top: 1;
-  left: 1;
-  transform: translateX(-50%) translateY(-50%);
+  top: 1/2;
+  left: 1/2;
   animation: rotate 350s infinite linear;
   background-color: transparent;
 }

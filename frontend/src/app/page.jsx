@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import styles from "./page.module.css";
+
 import Link from "next/link";
 import { Bell } from "lucide-react";
 import "./nav.css";
@@ -8,7 +8,7 @@ import { TypeAnimation } from "react-type-animation";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main className={'main'}>
       <section className="hero-section">
       <Nav />
         <div className="landing-1">
