@@ -39,7 +39,7 @@ const BlogCreate = () => {
       .unwrap()
       .then((res) => {
         // TODO: Redirect to posted blog
-        router.push("/");
+        router.push(`/blog/${res.id}`);
       });
   }
 

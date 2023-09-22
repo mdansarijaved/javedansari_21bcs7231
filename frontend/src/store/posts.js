@@ -12,7 +12,10 @@ export const postsApi = createApi({
             query: () => ({
                 url: '/posts/',
             }),
-            providesTags: ['Post']
+            providesTags: ['Post'],
+            transformResponse: (res) => {
+                return res.sort(compareCreateTimes);
+            }
         }),
         addPosts: builder.mutation({
             query: ({ uid, content, title }) => ({
@@ -25,7 +28,7 @@ export const postsApi = createApi({
                 method: 'POST'
             }),
             invalidatesTags: ['Post']
-            
+
         }),
         getPostById: builder.query({
             query: ({ id }) => ({
@@ -45,9 +48,22 @@ export const postsApi = createApi({
 
 // Export hooks for usage in functional components, which are
 // auto-generated based on the defined endpoints
-export const { 
+export const {
     useGetPostsQuery,
     useGetPostByIdQuery,
     useAddPostsMutation,
     useDeletePostQuery,
 } = postsApi
+
+function compareCreateTimes(a, b) {
+    const dateA = new Date(a.create_time);
+    const dateB = new Date(b.create_time);
+
+    if (dateA < dateB) {
+        return 1;
+    }
+    if (dateA > dateB) {
+        return -1;
+    }
+    return 0;
+}
