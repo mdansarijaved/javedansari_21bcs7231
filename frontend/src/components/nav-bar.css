@@ -18,6 +18,7 @@
   top: 0;
   left: 2px;
   width: 100%;
+  padding: 20px 20px;
   display: flex;
   background-color: #121318;
   justify-content: space-evenly;
@@ -25,6 +26,46 @@
   border-bottom: 1px solid gray;
   z-index: 10;
 }
+.actual-menu{
+  height: 100vh;
+  width: 100vw;
+  background-color: #121318;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.close-menu{
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 2rem;
+  font-weight: 200;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.nav-menu{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%; 
+  font-size: 2rem;
+  gap: 2rem;
+}
+.show{
+
+ transform: translateX(100);
+ transition: transform 0.5s ease-in-out;
+}
+
+.hide{
+  transform: translateX(-100%);
+ transition: transform 0.5s ease-in-out;
+
+}
+
 
 .nav-list {
   display: flex;
@@ -80,7 +121,9 @@ ol {
   color: var(--text-hover);
   transition: color 0.2s;
 }
-
+.menu{
+  cursor: pointer;
+}
 .hero-section {
   position: relative;
   display: flex;
@@ -216,12 +259,27 @@ ol {
 .card {
   font-size: 5rem;
   border: 2px solid gray;
-  width: 700px;
+  width: 100%;
   padding: 20px;
   border-radius: 20px;
   overflow: hidden;
 }
 
+@media screen and (max-width: 1000px) {
+  .card {
+    font-size: 3rem; /* Adjust font size for tablets */
+    width: 400px;   /* Adjust width for tablets */
+  }
+}
+
+/* Media query for mobile screens (up to 767px) */
+@media screen and (max-width: 800px) {
+  .card {
+    font-size: 1.5rem; /* Adjust font size for mobile */
+    width: 300px;   /* Adjust width for mobile */
+    padding: 10px;   /* Adjust padding for mobile */
+  }
+}
 
 .card-tittle {
   font-size: 2rem;
@@ -241,6 +299,19 @@ ol {
   border-radius: 10px;
   padding: 10px;
 }
+
+@media screen and (max-width: 1000px) {
+  .anotherdiv {
+    display: none; /* Hide on tablets */
+  }
+}
+
+/* Media query for mobile screens (up to 767px) */
+@media screen and (max-width: 400px) {
+  .anotherdiv {
+    display: none; /* Hide on mobile */
+  }
+} 
 
 .svg-container {
   border: 1px solid gray;
