@@ -1,90 +1,146 @@
-*{
-    margin: 0;
-    padding: 0;
-    color: white;
-    text-decoration: none;
-    
+* {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-decoration: none;
 }
-.logo{
-    font-size: 30px;
-    background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;   
+.logo {
+  font-size: 30px;
+  background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
+  background-clip: text;
+  text-fill-color: transparent;
+  animation: colorchange 20s infinite alternate;
 }
-.main-nav{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid gray;
-}
-
-.nav-list{
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
+.main-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
 }
 
-
-.nav-login{
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-ul, ol{
-    list-style: none;
-}
-.divider{
-    height: 2rem;
-    width: 1px;
-    background-color: gray;
-    margin: 1rem 0;
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
 }
 
-.navButton{
-    background-color: #c70880;
-    padding-inline: 20px;
-    padding-block: 10px;
-    border-radius: 10px;
-    color: white; 
+.nav-login {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+ul,
+ol {
+  list-style: none;
+}
+.divider {
+  height: 2rem;
+  width: 1px;
+  background-color: gray;
+  margin: 1rem 0;
 }
 
-.buttons{
-    display: flex;
-    gap: 1rem;
+.navButton {
+  background-color: #c70880;
+  padding-inline: 20px;
+  padding-block: 10px;
+  border-radius: 10px;
+  color: white;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
 }
 .loginButton:hover,
 .navButton:hover {
-  background-color: #ca086a; 
-  transition: background-color 0.2s; 
-}   
-.loginButton{
-    background-color: #c70880;
-    padding-inline: 20px;
-    padding-block: 10px;
-    border-radius: 10px;
-    color: white;
-
+  background-color: #ca086a;
+  transition: background-color 0.2s;
+}
+.loginButton {
+  background-color: #c70880;
+  padding-inline: 20px;
+  padding-block: 10px;
+  border-radius: 10px;
+  color: white;
 }
 
-.hoverText:hover{
-    color: #c70880;
-    transition: color 0.2s;
+.hoverText:hover {
+  color: #c70880;
+  transition: color 0.2s;
 }
 
-.hero-section{
-    display: flex;
-    height: 500px;
-    justify-content: center;
-    align-items: center;    
-    font-size: 3rem;
-    font-weight: 100;   
-    background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  justify-content: center;
+  align-items: center;
+}
 
+.text {
+  font-size: 4rem;
+  font-weight: 600;
+  background: linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
+  background-clip: text;
+  animation: colorchange 20s infinite alternate;
+}
+
+@keyframes colorchange {
+  0% {
+    color: rgb(177, 55, 159);
+  }
+
+  10% {
+    color: #f1c40f;
+  }
+
+  20% {
+    color: rgb(241, 171, 39);
+  }
+
+  30% {
+    color: #d35400;
+  }
+
+  40% {
+    color: rgb(223, 63, 90);
+  }
+
+  50% {
+    color: #c03131;
+  }
+
+  60% {
+    color: rgb(188, 12, 241);
+  }
+
+  70% {
+    color: rgb(188, 12, 241);
+  }
+
+  80% {
+    color: rgb(188, 12, 241);
+  }
+
+  90% {
+    color: #8e44ad;
+  }
+
+  100% {
+    color: pink;
+  }
+}
+
+.text-para{
+  font-size: 20px;
+  font-weight: 500;
+  margin: 20px 0px;
+  width: 50%; 
+  text-align: center;
 }

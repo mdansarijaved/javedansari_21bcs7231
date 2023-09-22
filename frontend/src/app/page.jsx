@@ -1,12 +1,14 @@
+'use client'
 import Image from "next/image";
 import styles from "./page.module.css";
 import Link from "next/link";
 import { Bell } from "lucide-react";
 import "./nav.css";
+import { TypeAnimation } from 'react-type-animation';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main className={styles.main} >
       <nav className="main-nav">
         <h1 className="logo">YourBlog</h1>
         <ul className="nav-list">
@@ -38,9 +40,26 @@ export default function Home() {
         </div>
       </nav>
       <section className="hero-section">
-        <h1>
-          Tell your story to the world. 
-        </h1>
+      <TypeAnimation
+      sequence={[
+        2000,
+        'Your story matters.', // Types 'One'
+        2000, // Waits 1s
+        'Let the world know it.', // Deletes 'One' and types 'Two'
+        2000, // Waits 2s
+        'Tell your story to the world.',
+        2000, // Types 'Three' without deleting 'Two'
+        () => {
+          console.log('Sequence completed');
+        },
+      ]}
+      wrapper="span"
+      cursor={true}
+      repeat={Infinity}
+      className="text"
+    />
+    <p className="text-para">Explore Limitless Horizons: Unearth, Share, and Discover Stories Beyond Imagination on Our Blogging Odyssey</p>
+
       </section>
     </main>
   );
