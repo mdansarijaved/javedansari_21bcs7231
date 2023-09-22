@@ -1,0 +1,56 @@
+.blog__menu {
+    position: relative;
+    width: min-content;
+    margin-left: 200px;
+}
+
+.menu__button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3em;
+    width: 4em;
+    padding: 0.9em;
+    border-radius: 50%;
+    font-size: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.menu__button:hover {
+    background-color: rgb(224, 224, 224);
+}
+
+.menu__button li {
+    list-style-type: none;
+    height: 0.5em;
+    width: 0.5em;
+    background-color: rgb(117, 117, 117);
+    border-radius: 50%;
+}
+
+.menu__dropdown {
+    position: absolute;
+    right: 10px;
+    bottom: -90px;
+    
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.menu__dropdown-option {
+    border: none;
+    padding: 10px 20px;
+    background-color: rgb(219, 219, 219);
+    color: rgb(95, 112, 160);
+    font-size: 1rem;
+}
+
+.menu__dropdown-option:hover {
+    background-color: rgb(150, 150, 150);
+}
+
