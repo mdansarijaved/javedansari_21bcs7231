@@ -10,18 +10,35 @@ const CreatedBy = ({ uid }) => {
     <div className={styles.profile}>
 
       <div className={styles.imagediv}>
-        <Image
-          src={"/images/hero.jpg"}
-          width={200}
-          height={200}
-          alt="profile"
-        />
+        <div style={{ backgroundColor: `#${stringToSixDigitNumber(uid)}`, width: '100%', height: '100%' }}>
+
+        </div>
       </div>
       <span className={styles.uid}>{uid} </span>
       <span className={styles.dot}></span>
       <span className={styles.date}>{day}/{month}/{year}</span>
     </div>
   );
+}
+
+function stringToSixDigitNumber(inputString) {
+  // Calculate the hash code of the input string
+  let hashCode = 0;
+  for (let i = 0; i < inputString.length; i++) {
+    const charCode = inputString.charCodeAt(i);
+    hashCode = (hashCode << 5) - hashCode + charCode;
+  }
+  
+  // Make sure the result is positive
+  hashCode = Math.abs(hashCode);
+
+  // Convert the hash code to a 6-digit number
+  const sixDigitNumber = hashCode % 1000000;
+  
+  // Pad the number with leading zeros if necessary
+  const sixDigitString = sixDigitNumber.toString().padStart(6, '0');
+
+  return sixDigitString;
 }
 
 export default CreatedBy;

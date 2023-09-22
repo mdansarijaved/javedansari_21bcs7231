@@ -118,6 +118,7 @@ ol {
   border-radius: 10px;
   color: white;
   animation: colorchangeButton 100s infinite alternate;
+  cursor: pointer;
 }
 
 .hoverText:hover {
@@ -129,7 +130,7 @@ ol {
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 100px 0px 0px 50px;
+  padding: 150px 0px 0px 50px;
   align-items: flex-start;
   gap: 60px;
 }
@@ -257,34 +258,7 @@ ol {
   gap: 3rem;
 }
 
-.card {
-  font-size: 5rem;
-  border: 2px solid gray;
-  width: 100%;
-  padding: 20px;
-  border-radius: 20px;
-  overflow: hidden;
-}
-@media screen and (max-width: 1000px) {
-  .card {
-    font-size: 3rem; /* Adjust font size for tablets */
-    width: 400px;   /* Adjust width for tablets */
-  }
-}
 
-/* Media query for mobile screens (up to 767px) */
-@media screen and (max-width: 800px) {
-  .card {
-    font-size: 1.5rem; /* Adjust font size for mobile */
-    width: 300px;   /* Adjust width for mobile */
-    padding: 10px;   /* Adjust padding for mobile */
-  }
-}
-
-.card-tittle {
-  font-size: 2rem;
-  font-weight: 300;
-}
 .anotherdiv {
   width: 500px;
   display: block;
@@ -305,13 +279,6 @@ ol {
     display: none; /* Hide on mobile */
   }
 } 
-
-
-.card-content {
-  font-size: 1rem;
-  font-weight: 300;
-}
-
 
 
 .svg-container {
