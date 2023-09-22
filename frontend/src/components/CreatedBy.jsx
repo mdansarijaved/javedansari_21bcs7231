@@ -3,11 +3,12 @@ import styles from './blogcontent.module.css';
 
 const CreatedBy = ({ uid }) => {
 
- let time = new Date().getUTCDate();  
- let date = new Date().getUTCMonth();
-    let year = new Date().getUTCFullYear();
-    return (
-      <div className={styles.profile}>
+  let day = new Date().getUTCDate();
+  let month = new Date().getUTCMonth();
+  let year = new Date().getUTCFullYear();
+  return (
+    <div className={styles.profile}>
+
       <div className={styles.imagediv}>
         <Image
           src={"/images/hero.jpg"}
@@ -16,9 +17,11 @@ const CreatedBy = ({ uid }) => {
           alt="profile"
         />
       </div>
-      <p className={styles.uid}>{uid} <span className={styles.dot}> . </span> <span className={styles.time}>{time}/{date}/{year}</span></p>
+      <span className={styles.uid}>{uid} </span>
+      <span className={styles.dot}></span>
+      <span className={styles.date}>{day}/{month}/{year}</span>
     </div>
-    );
-  }
+  );
+}
 
 export default CreatedBy;
