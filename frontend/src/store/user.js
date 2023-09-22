@@ -37,8 +37,8 @@ function validateUID(uid) {
   return pattern.test(uid)
 }
 
-export const { login, logout } = userSlice.actions
 export const useUser = () => {
   return useSelector(state => state.user)
 }
+export const { login, logout } = userSlice.actions
 export default userSlice.reducer

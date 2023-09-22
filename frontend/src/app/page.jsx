@@ -1,102 +1,22 @@
-import Card from "@/components/card";
-import Nav from "@/components/nav-bar";
+'use client'
+import BlogMinified from "@/components/blog-minified";
 import "./page.css";
 import Image from "next/image";
+import { useGetPostsQuery } from "@/store/posts";
 
 export default function Home() {
+  const { data: blogs, isLoading } = useGetPostsQuery();
+  
+  if (isLoading) return <div>Loading...</div>
   return (
     <>
         <div className="landing-1">
-          <Card
-            Title={"lorem ipsum"}
-            content={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"
-            }
-          />
-          <Card
-            Title={"lorem ipsum"}
-            content={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"
-            }
-          />{" "}
-          <Card
-            Title={"lorem ipsum"}
-            content={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"
-            }
-          />{" "}
-          <Card
-            Title={"lorem ipsum"}
-            content={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"
-            }
-          />{" "}
-          <Card
-            Title={"lorem ipsum"}
-            content={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"
-            }
-          />{" "}
-          <Card
-            Title={"lorem ipsum"}
-            content={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"
-            }
-          />{" "}
-          <Card
-            Title={"lorem ipsum"}
-            content={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"
-            }
-          />{" "}
-          <Card
-            Title={"lorem ipsum"}
-            content={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"
-            }
-          />{" "}
-          <Card
-            Title={"lorem ipsum"}
-            content={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"
-            }
-          />{" "}
-          <Card
-            Title={"lorem ipsum"}
-            content={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"
-            }
-          />{" "}
-          <Card
-            Title={"lorem ipsum"}
-            content={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"
-            }
-          />{" "}
-          <Card
-            Title={"lorem ipsum"}
-            content={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"
-            }
-          />{" "}
-          <Card
-            Title={"lorem ipsum"}
-            content={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"
-            }
-          />{" "}
-          <Card
-            Title={"lorem ipsum"}
-            content={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"
-            }
-          />{" "}
-          <Card
-            Title={"lorem ipsum"}
-            content={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"
-            }
-          />
+          {blogs.map(blog => (
+            <BlogMinified 
+              key={blog.id}
+              blog={blog}
+            />
+          ))}
         </div>
         <div className="anotherdiv">
           <div className="svg-container">
