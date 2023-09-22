@@ -9,7 +9,7 @@
 .logo {
   font-size: 30px;
   font-family: sans-serif;
-  background: --background-color;
+  background: var(--background-color);
   background-clip: text;
   animation: colorchange 100s infinite alternate;
 }

@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { Bell } from "lucide-react";
 import { useUser } from "@/store/user";
-
+import './nav-bar.css'
 
 const Nav = () => {
     const user = useUser();

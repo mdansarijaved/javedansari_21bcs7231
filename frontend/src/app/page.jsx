@@ -1,6 +1,6 @@
 import Card from "@/components/card";
 import Nav from "@/components/nav-bar";
-import "./nav.css";
+import "./page.css";
 import Image from "next/image";
 
 export default function Home() {
