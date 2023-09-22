@@ -3,16 +3,15 @@
   padding: 0;
   color: white;
   text-decoration: none;
-
-}
-.main{
   background-color: #121318;
 }
+
 .logo {
   font-size: 30px;
+  font-family: sans-serif;
   background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
   background-clip: text;
-  animation: colorchange 20s infinite alternate;
+  animation: colorchange 100s infinite alternate;
 }
 .main-nav {
   position: fixed;
@@ -20,6 +19,7 @@
   left: 2px;
   width: 100%;
   display: flex;
+  background-color: #121318 ;
   justify-content: space-evenly;
   align-items: center;
   border-bottom: 1px solid gray;
@@ -57,7 +57,7 @@ ol {
 
 .navButton {
   background-color: #c70880;
-  animation: colorchangeButton 20s infinite alternate;
+  animation: colorchangeButton 100s infinite alternate;
   padding-inline: 20px;
   padding-block: 10px;
   border-radius: 10px;
@@ -75,7 +75,7 @@ ol {
   padding-block: 10px;
   border-radius: 10px;
   color: white;
-  animation: colorchangeButton 20s infinite alternate;
+  animation: colorchangeButton 100s infinite alternate;
 }
 
 .hoverText:hover {
@@ -133,7 +133,7 @@ ol {
   }
 
   100% {
-    background-color: pink;
+    background-color: red;
   }
 }
 
@@ -149,12 +149,15 @@ ol {
   z-index: 10;
   text-align: center;
 }
+
+
+
 .text {
   font-size: 4rem;
   font-weight: 600;
   background: linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
   background-clip: text;
-  animation: colorchange 20s infinite alternate;
+  animation: colorchange 100s infinite alternate;
   z-index: 100;
 }
 
@@ -200,35 +203,31 @@ ol {
   }
 
   100% {
-    color: pink;
+    color: red;
   }
 }
 
 
 .landing-1{
-  position: relative;
-  height: 100vh;
-  text-align: center;
+  position: relative; 
   display: grid;
   align-items: center;
   justify-content: center;
-}
-.peepsvg {
-  position: absolute;
-  top: 1/2;
-  left: 1/2;
-  animation: rotate 350s infinite linear;
-  background-color: transparent;
+  min-height: 100vh;
 }
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-    /* write some css to dim the color  */
 
-  }
-  100% {
-    transform: rotate(360deg);
+
+.card{
+  font-size: 5rem;
+  border: 2px solid gray;
+  height: 200px;
+  width: 700px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+
+.card-tittle{
   
-  }
 }

@@ -12,38 +12,7 @@ export default function Home() {
       <section className="hero-section">
       <Nav />
         <div className="landing-1">
-          <div className="text-div">
-            <TypeAnimation
-              sequence={[
-                2000,
-                "Your story matters.", // Types 'One'
-                2000, // Waits 1s
-                "Let the world know it.", // Deletes 'One' and types 'Two'
-                2000, // Waits 2s
-                "Tell your story to the world.",
-                2000, // Types 'Three' without deleting 'Two'
-                () => {
-                  console.log("Sequence completed");
-                },
-              ]}
-              wrapper="span"
-              cursor={true}
-              repeat={Infinity}
-              className="text"
-            />
-            <p className="text-para">
-              Explore Limitless Horizons: Unearth, Share, and Discover Stories
-              Beyond Imagination on Our Blogging Odyssey
-            </p>
-          </div>
-          <Image
-            src={"/images/16.svg"}
-            width={900}
-            height={600}
-            className="peepsvg"
-            alt="rotating svg"
-            priority
-          />
+        <Card />
         </div>
         <div className="anotherdiv"></div>
       </section>
@@ -88,3 +57,15 @@ const Nav = () => {
     </nav>
   );
 };
+
+
+const Card = () => {
+  return (
+    <div className="card">
+      <h1 className="card-tittle">Tittle</h1>
+      <div className="card-content">
+        <p></p>
+      </div>
+    </div>
+  )
+}
