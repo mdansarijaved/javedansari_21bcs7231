@@ -19,8 +19,7 @@
   
 }
 .uid{
-    display: flex   ;
-    align-items: center;
+    font-size: 0.9rem; 
 }
 .dot{
     padding: 0 10px;
@@ -28,6 +27,7 @@
 .profile{
     display: flex;
     justify-content: flex-start; 
+    margin: 10px 0;
     align-items: center;
 }
 
