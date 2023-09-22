@@ -6,11 +6,13 @@ export const postsApi = createApi({
     baseQuery: fetchBaseQuery({
         baseUrl: 'https://cu-backend.up.railway.app'
     }),
+    tagTypes: ['Post'],
     endpoints: (builder) => ({
         getPosts: builder.query({
             query: () => ({
                 url: '/posts/',
-            })
+            }),
+            providesTags: ['Post']
         }),
         addPosts: builder.mutation({
             query: ({ uid, content, title }) => ({
@@ -21,20 +23,23 @@ export const postsApi = createApi({
                     'content': content,
                 },
                 method: 'POST'
-            })
+            }),
+            invalidatesTags: ['Post']
             
         }),
         getPostById: builder.query({
             query: ({ id }) => ({
                 url: `/posts/${id}/`
-            })
+            }),
+            providesTags: ['Post']
         }),
         deletePost: builder.query({
             query: ({ id }) => ({
                 url: `/posts/${id}/`,
                 method: 'DELETE',
-            })
-        })
+            }),
+            invalidatesTags: ['Post']
+        }),
     }),
 })
 
