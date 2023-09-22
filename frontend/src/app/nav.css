@@ -86,9 +86,10 @@ ol {
 .hero-section {
   position: relative;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  padding: 100px 0px 0px 50px;
+  align-items: start;
+  gap: 60px; 
 }
 
 @keyframes colorchangeButton {
@@ -212,8 +213,9 @@ ol {
   position: relative; 
   display: grid;
   align-items: center;
-  justify-content: center;
+  justify-content:center;
   min-height: 100vh;
+  gap: 2rem;
 }
 
 
@@ -221,13 +223,27 @@ ol {
 .card{
   font-size: 5rem;
   border: 2px solid gray;
-  height: 200px;
   width: 700px;
+  padding: 20px;
   border-radius: 20px;
   overflow: hidden;
 }
 
 
 .card-tittle{
-  
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.card-content{
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.anotherdiv{
+  width: 500px;
+  display: block;
+  height: 800px;
+  border: 1px solid gray;
+  border-radius: 10px;
 }

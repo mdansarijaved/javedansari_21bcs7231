@@ -1,26 +1,33 @@
 "use client";
-import Image from "next/image";
-
 import Link from "next/link";
 import { Bell } from "lucide-react";
 import "./nav.css";
-import { TypeAnimation } from "react-type-animation";
+import { useUser } from "@/store/user";
+import Card from "@/components/card";
+
 
 export default function Home() {
   return (
-    <main className={'main'}>
+    <main className={"main"}>
       <section className="hero-section">
-      <Nav />
+        <Nav />
         <div className="landing-1">
-        <Card />
+          <Card Title={"lorem ipsum"} content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"} />
+          <Card Title={"lorem ipsum"} content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"} /> <Card Title={"lorem ipsum"} content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"} /> <Card Title={"lorem ipsum"} content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"} /> <Card Title={"lorem ipsum"} content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"} /> <Card Title={"lorem ipsum"} content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"} /> <Card Title={"lorem ipsum"} content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"} /> <Card Title={"lorem ipsum"} content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"} /> <Card Title={"lorem ipsum"} content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"} /> <Card Title={"lorem ipsum"} content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"} /> <Card Title={"lorem ipsum"} content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"} /> <Card Title={"lorem ipsum"} content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"} /> <Card Title={"lorem ipsum"} content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"} /> <Card Title={"lorem ipsum"} content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"} /> <Card Title={"lorem ipsum"} content={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, at odio ipsum placeat quidem aliquam voluptatum quaerat et iure culpa dolorem optio cum, incidunt sequi corrupti cumque? Error, optio numquam!"} />
+          
+        
         </div>
-        <div className="anotherdiv"></div>
+        <div className="anotherdiv">
+
+        </div>
       </section>
     </main>
   );
 }
 
 const Nav = () => {
+  const user = useUser();
+  console.log(user);
   return (
     <nav className="main-nav">
       <h1 className="logo">Reflectify</h1>
@@ -47,25 +54,22 @@ const Nav = () => {
       </ul>
       <div className="nav-login">
         <Bell />
-        <Link className="navtext loginButton" href="/login">
-          Login
-        </Link>
-        <Link className="navtext hoverText" href="/blog/myblogs">
-          My blogs
-        </Link>
+        {user ? (
+          <>
+          <Link className="navtext hoverText" href="/">
+            {user.uid}
+          </Link>
+          <Link className="navtext hoverText" href="/blog/myblogs">
+           My blogs
+          </Link>
+          </>
+        ) : (
+          <Link className="navtext loginButton" href="/login">
+            Login
+          </Link>
+        )}
       </div>
     </nav>
   );
 };
 
-
-const Card = () => {
-  return (
-    <div className="card">
-      <h1 className="card-tittle">Tittle</h1>
-      <div className="card-content">
-        <p></p>
-      </div>
-    </div>
-  )
-}
