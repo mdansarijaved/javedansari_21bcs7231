@@ -42,7 +42,7 @@ const Nav = () => {
           </li>
         </ul>
         <div className="nav-login">
-          <Bell />
+          <Bell className="bellHover"/>
           {user.uid ? (
             <>
             <Link className="navtext hoverText" href="/">

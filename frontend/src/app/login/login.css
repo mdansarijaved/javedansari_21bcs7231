@@ -38,6 +38,7 @@
     justify-content: center;
     align-items: center;
     margin-block: 20px;
+    text-indent: 40px;
 }
 .input{
     outline: none;
