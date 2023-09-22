@@ -7,6 +7,7 @@ import { useAddPostsMutation } from "@/store/posts";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
 import { useUser } from "@/store/user";
+import remarkGfm from 'remark-gfm'
 
 const BlogCreate = () => {
   const router = useRouter();
@@ -84,7 +85,7 @@ const BlogCreate = () => {
         style={{ display: markdownDisplay ? "block" : "none" }}
         className="Markdown-Div"
       >
-        <ReactMarkdown>{markdownDisplay}</ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdownDisplay}</ReactMarkdown>
       </div>
     </div>
   );
