@@ -86,7 +86,7 @@ ol {
   display: flex;
   justify-content: center;
   padding: 100px 0px 0px 50px;
-  align-items: start;
+  align-items: flex-start;
   gap: 60px;
 }
 

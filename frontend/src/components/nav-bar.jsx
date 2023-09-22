@@ -4,13 +4,17 @@ import { Bell } from "lucide-react";
 import { useUser, logout } from "@/store/user";
 import './nav-bar.css'
 import { useDispatch } from "react-redux";
+import { useRouter } from "next/navigation";
 
 const Nav = () => {
     const user = useUser();
     const dispatch = useDispatch();
+    const router = useRouter();
 
     const handleLogout = () => {
       dispatch(logout())
+
+      router.push('/login')
     };
 
     return (
@@ -39,7 +43,7 @@ const Nav = () => {
         </ul>
         <div className="nav-login">
           <Bell />
-          {user ? (
+          {user.uid ? (
             <>
             <Link className="navtext hoverText" href="/">
               {user.uid}
