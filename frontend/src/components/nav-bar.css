@@ -154,7 +154,7 @@ ol {
   background: linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
   background-clip: text;
   animation: colorchange 100s infinite alternate;
-  z-index: 100;
+
 }
 
 @keyframes colorchange {
