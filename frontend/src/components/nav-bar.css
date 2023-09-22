@@ -262,7 +262,6 @@ ol {
 .anotherdiv {
   width: 500px;
   display: block;
-  height: 800px;
   border: 1px solid var(--text-hover);
   border-radius: 10px;
   padding: 10px;

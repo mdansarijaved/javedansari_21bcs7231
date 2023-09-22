@@ -1,24 +1,23 @@
-.blogText{
-    padding-top: 15px;
-    margin-bottom: 40px;
-}
-.blogText .blogparaText {
-    margin-bottom: 20px; 
-  }
 .blogText {
-    width: 480px; 
-    border: 1px solid #ccc; 
-    border-radius: 8px; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    margin: 10px;
-    background-color: #121318; 
-  }
-  
-  .blogparaText {
-    padding: 20px; 
-  }
-  
-  .blogparaText p {
-    margin: 10px 0; 
-  }
-  
+  padding-top: 15px;
+}
+
+.blogText .blogparaText {
+  margin-bottom: 20px;
+}
+
+.blogText {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #121318;
+}
+
+.blogparaText {
+  padding: 20px;
+}
+
+.blogparaText p {
+  margin: 10px 0;
+}
