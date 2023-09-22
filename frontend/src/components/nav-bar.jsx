@@ -17,7 +17,7 @@ const Nav = () => {
             </Link>
           </li>
           <li>
-            <Link className="navlistText hoverText" href="/">
+            <Link className="navlistText hoverText" href="/blog">
               Feed
             </Link>
           </li>

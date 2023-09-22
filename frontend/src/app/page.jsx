@@ -1,6 +1,7 @@
 import Card from "@/components/card";
 import Nav from "@/components/nav-bar";
 import "./nav.css";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -99,7 +100,14 @@ export default function Home() {
             }
           />
         </div>
-        <div className="anotherdiv"></div>
+        <div className="anotherdiv">
+          <div className="svg-container">
+            <div className="text-svg-container">
+            <h3>Let the world know your story.</h3>
+            </div>
+          <Image src={'/images/16.svg'} width={200} height={200} alt="svg" className="rotate-svg" />
+          </div>
+        </div>
       </section>
     </main>
   );
