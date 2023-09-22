@@ -27,7 +27,7 @@
 }
 .profile{
     display: flex;
-    justify-content:start; 
+    justify-content: flex-start; 
     align-items: center;
 }
 
@@ -54,7 +54,7 @@
 
 .reaction{
     display: flex;
-    justify-content: start; 
+    justify-content: flex-start; 
     align-items: center;
     gap: 20px;
     border-bottom: 1px solid gray;
