@@ -77,7 +77,7 @@ const BlogCreate = () => {
       <input className={styles['blog-titlearea']} placeholder="Add title" ref={titleRef}></input>
       <textarea
         className={styles['blog-textarea']}
-        placeholder="Tell your story to the world"
+        placeholder="Tell your story to the world. (You can use markdown format here)"
         ref={markdown}
       ></textarea>
       <div
@@ -88,6 +88,10 @@ const BlogCreate = () => {
           {markdownDisplay}
         </Markdown>
       </div>
+
+
+      <a href="https://www.markdownguide.org/basic-syntax/" target="_blank">Click here on how to use markdown </a>
+
     </div>
   );
 };

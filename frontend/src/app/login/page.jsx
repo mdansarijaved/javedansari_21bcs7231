@@ -38,10 +38,10 @@ const page = () => {
             Sign in to your account
           </p>
           <div className="inputdiv">
-            <input type="text" placeholder="Email or Username" className="input" ref={uidRef}/>
+            <input type="text" placeholder="UID" className="input" ref={uidRef} defaultValue={'21BCS1353'}/>
           </div>
           <div className="inputdiv">
-            <input type="password" placeholder="Password" className="input" ref={passwordRef}/>
+            <input type="password" placeholder="Password. (Hint - xyz)" className="input" ref={passwordRef} defaultValue={'xyz'}/>
           </div>
           <div>
             {user.error == 'PASSWORD_MISMATCH' &&
