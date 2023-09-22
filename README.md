@@ -14,11 +14,9 @@ pnpm install
 pnpm dev
 ```
 
-## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
 
-// write about the project as the name is Reflectify and it is a bloggin site where you can write your blogs and share it with the world.and you can login using you college uid and use password and xyz
+
 
 ## Reflectiy
 
