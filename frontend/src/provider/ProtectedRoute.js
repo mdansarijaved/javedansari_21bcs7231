@@ -6,11 +6,11 @@ export default function ProtectedRoute ({ children }) {
     const router = useRouter();
   
     // Check if user data exists
-    // if (!user.uid || user.error) {
-    //   // Redirect to the login page
-    //   router.push('/login');
-    //   return null; // Return null to prevent rendering of the protected content
-    // }
+    if (!user.uid || user.error) {
+      // Redirect to the login page
+      router.push('/login');
+      return null; // Return null to prevent rendering of the protected content
+    }
   
     return children; // Render the protected content
 };

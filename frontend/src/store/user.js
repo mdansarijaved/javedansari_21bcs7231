@@ -33,7 +33,6 @@ function checkPassword(password) {
 
 function validateUID(uid) {
   const pattern = /(([1-9]{2})+([A-Za-z]{3})+([1-9]{4,5}))/
-  console.log(uid, pattern.test(uid))
   return pattern.test(uid)
 }
 
