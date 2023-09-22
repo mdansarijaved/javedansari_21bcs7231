@@ -36,7 +36,7 @@ export const postsApi = createApi({
             }),
             providesTags: ['Post']
         }),
-        deletePost: builder.query({
+        deletePost: builder.mutation({
             query: ({ id }) => ({
                 url: `/posts/${id}/`,
                 method: 'DELETE',
@@ -52,7 +52,7 @@ export const {
     useGetPostsQuery,
     useGetPostByIdQuery,
     useAddPostsMutation,
-    useDeletePostQuery,
+    useDeletePostMutation,
 } = postsApi
 
 function compareCreateTimes(a, b) {

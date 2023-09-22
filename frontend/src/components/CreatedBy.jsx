@@ -1,9 +1,11 @@
 import Image from "next/image";
 import styles from './blogcontent.module.css';
 import BlogMenu from "./BlogMenu";
+import { useUser } from "@/store/user";
 
 const CreatedBy = ({ blog }) => {
   const { create_by: uid, create_time: time } = blog;
+  const user = useUser();
 
   const date = new Date(time);
 
@@ -25,7 +27,9 @@ const CreatedBy = ({ blog }) => {
       <span className={styles.date}>{day}/{month}/{year}</span>
       </div>
       <div>
-        <BlogMenu/>
+        {uid === user.uid && 
+          <BlogMenu blog={blog}/>
+        }
       </div>
     </div>
   );

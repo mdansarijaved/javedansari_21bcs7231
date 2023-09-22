@@ -1,24 +1,26 @@
 import { useState } from 'react';
 import './blogMenu.css'
+import { useDeletePostMutation } from '@/store/posts';
+import { useUser } from '@/store/user';
 
-export default function BlogMenu({ blogId }) {
-    const [showDropdown, setShowDropdown] = useState(true);
+export default function BlogMenu({ blog }) {
+    const { create_by: uid, id } = blog;
+    const [deleteBlog] = useDeletePostMutation()
+    const [showDropdown, setShowDropdown] = useState(false);
 
     return (
-        <div class="blog__menu">
-            <button class="menu__button" onClick={() => setShowDropdown(!showDropdown)}>
+        <div className="blog__menu">
+            <button className="menu__button" onClick={() => setShowDropdown(!showDropdown)}>
                 <li></li>
                 <li></li>
                 <li></li>
             </button>
             {showDropdown ?
-                <div class="menu__dropdown">
+                <div className="menu__dropdown">
                     <button
-                        class="menu__dropdown-option"
+                        onClick={() => deleteBlog({ id })}
+                        className="menu__dropdown-option"
                     >Delete</button>
-                    <button
-                        class="menu__dropdown-option"
-                    >Report</button>
                 </div> :
                 null
             }
