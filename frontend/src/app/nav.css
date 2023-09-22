@@ -11,9 +11,12 @@
   animation: colorchange 20s infinite alternate;
 }
 .main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   border-bottom: 1px solid gray;
   z-index: 10;
@@ -27,26 +30,7 @@
   z-index: 10;
 }
 
-.peepsvg {
-  position: absolute;
-  top: 1/2;
-  left: 1/2;
-  z-index: 1;
-  animation: rotate 50s infinite linear;
-  background-color: transparent;
-}
 
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-    /* write some css to dim the color  */
-
-  }
-  100% {
-    transform: rotate(360deg);
-  
-  }
-}
 
 .nav-login {
   text-decoration: none;
@@ -69,7 +53,6 @@ ol {
 
 .navButton {
   background-color: #c70880;
-
   animation: colorchangeButton 20s infinite alternate;
   padding-inline: 20px;
   padding-block: 10px;
@@ -81,11 +64,7 @@ ol {
   display: flex;
   gap: 1rem;
 }
-.loginButton:hover,
-.navButton:hover {
-  background-color: #ca086a;
-  transition: background-color 0.2s;
-}
+
 .loginButton {
   background-color: #c70880;
   padding-inline: 20px;
@@ -101,20 +80,14 @@ ol {
 }
 
 .hero-section {
+  position: relative;
   display: flex;
+
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.text {
-  font-size: 4rem;
-  font-weight: 600;
-  background: linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
-  background-clip: text;
-  animation: colorchange 20s infinite alternate;
-  z-index: 10;
-}
 @keyframes colorchangeButton {
   0% {
     background-color: rgb(177, 55, 159);
@@ -159,6 +132,27 @@ ol {
   100% {
     background-color: pink;
   }
+}
+
+.text-para {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 20px 0px;
+  z-index: 10;
+  background-color: transparent;
+
+}
+.text-div{
+  z-index: 10;
+  text-align: center;
+}
+.text {
+  font-size: 4rem;
+  font-weight: 600;
+  background: linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
+  background-clip: text;
+  animation: colorchange 20s infinite alternate;
+  z-index: 100;
 }
 
 @keyframes colorchange {
@@ -207,17 +201,32 @@ ol {
   }
 }
 
-.text-para {
-  font-size: 20px;
-  font-weight: 500;
-  margin: 20px 0px;
-  width: 50%;
+
+.landing-1{
+  position: relative;
+  height: 100vh;
   text-align: center;
-  z-index: 10;
-
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+.peepsvg {
+  position: absolute;
+  top: 1;
+  left: 1;
+  transform: translateX(-50%) translateY(-50%);
+  animation: rotate 350s infinite linear;
   background-color: transparent;
-
 }
 
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    /* write some css to dim the color  */
 
-
+  }
+  100% {
+    transform: rotate(360deg);
+  
+  }
+}
