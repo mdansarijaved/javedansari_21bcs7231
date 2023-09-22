@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className={styles.main} >
       <nav className="main-nav">
-        <h1 className="logo">YourBlog</h1>
+        <h1 className="logo">Reflectify</h1>
         <ul className="nav-list">
           <li>
             <Link className="navlistText hoverText" href="/">
@@ -40,26 +40,31 @@ export default function Home() {
         </div>
       </nav>
       <section className="hero-section">
-      <TypeAnimation
-      sequence={[
-        2000,
-        'Your story matters.', // Types 'One'
-        2000, // Waits 1s
-        'Let the world know it.', // Deletes 'One' and types 'Two'
-        2000, // Waits 2s
-        'Tell your story to the world.',
-        2000, // Types 'Three' without deleting 'Two'
-        () => {
-          console.log('Sequence completed');
-        },
-      ]}
-      wrapper="span"
-      cursor={true}
-      repeat={Infinity}
-      className="text"
-    />
-    <p className="text-para">Explore Limitless Horizons: Unearth, Share, and Discover Stories Beyond Imagination on Our Blogging Odyssey</p>
+        <TypeAnimation
+          sequence={[
+            2000,
+            'Your story matters.', // Types 'One'
+            2000, // Waits 1s
+            'Let the world know it.', // Deletes 'One' and types 'Two'
+            2000, // Waits 2s
+            'Tell your story to the world.',
+            2000, // Types 'Three' without deleting 'Two'
+            () => {
+              console.log('Sequence completed');
+            },
+          ]}
+          wrapper="span"
+          cursor={true}
+          repeat={Infinity}
+          className="text"
+        />
+        <p className="text-para">Explore Limitless Horizons: Unearth, Share, and Discover Stories Beyond Imagination on Our Blogging Odyssey</p>
 
+        <Image src={"/images/16.svg"} width={900} height={600} className="peepsvg" alt="rotating svg" priority />
+
+        <div className="anotherdiv">
+
+        </div>
       </section>
     </main>
   );

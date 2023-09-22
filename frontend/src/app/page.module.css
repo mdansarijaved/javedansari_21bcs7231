@@ -1,9 +1,9 @@
 .main {
   padding-inline: 6rem;
   padding-block: 2rem;
-  height: 100vh;
   background-color: #121318;
-
+  /* overflow */
+  overflow: hidden;
 }
 
 .description {

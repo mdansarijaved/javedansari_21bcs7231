@@ -8,7 +8,6 @@
   font-size: 30px;
   background: -webkit-linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
   background-clip: text;
-  text-fill-color: transparent;
   animation: colorchange 20s infinite alternate;
 }
 .main-nav {
@@ -17,6 +16,7 @@
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid gray;
+  z-index: 10;
 }
 
 .nav-list {
@@ -24,6 +24,28 @@
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  z-index: 10;
+}
+
+.peepsvg {
+  position: absolute;
+  top: 1/2;
+  left: 1/2;
+  z-index: 1;
+  animation: rotate 50s infinite linear;
+  background-color: transparent;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+    /* write some css to dim the color  */
+
+  }
+  100% {
+    transform: rotate(360deg);
+  
+  }
 }
 
 .nav-login {
@@ -47,6 +69,8 @@ ol {
 
 .navButton {
   background-color: #c70880;
+
+  animation: colorchangeButton 20s infinite alternate;
   padding-inline: 20px;
   padding-block: 10px;
   border-radius: 10px;
@@ -68,6 +92,7 @@ ol {
   padding-block: 10px;
   border-radius: 10px;
   color: white;
+  animation: colorchangeButton 20s infinite alternate;
 }
 
 .hoverText:hover {
@@ -78,7 +103,6 @@ ol {
 .hero-section {
   display: flex;
   flex-direction: column;
-  height: 500px;
   justify-content: center;
   align-items: center;
 }
@@ -89,6 +113,52 @@ ol {
   background: linear-gradient(rgb(188, 12, 241), rgb(212, 4, 4));
   background-clip: text;
   animation: colorchange 20s infinite alternate;
+  z-index: 10;
+}
+@keyframes colorchangeButton {
+  0% {
+    background-color: rgb(177, 55, 159);
+  }
+
+  10% {
+    background-color: #f1c40f;
+  }
+
+  20% {
+    background-color: rgb(241, 171, 39);
+  }
+
+  30% {
+    background-color: #d35400;
+  }
+
+  40% {
+    background-color: rgb(223, 63, 90);
+  }
+
+  50% {
+    background-color: #c03131;
+  }
+
+  60% {
+    background-color: rgb(188, 12, 241);
+  }
+
+  70% {
+    background-color: rgb(188, 12, 241);
+  }
+
+  80% {
+    background-color: rgb(188, 12, 241);
+  }
+
+  90% {
+    background-color: #8e44ad;
+  }
+
+  100% {
+    background-color: pink;
+  }
 }
 
 @keyframes colorchange {
@@ -137,10 +207,17 @@ ol {
   }
 }
 
-.text-para{
+.text-para {
   font-size: 20px;
   font-weight: 500;
   margin: 20px 0px;
-  width: 50%; 
+  width: 50%;
   text-align: center;
+  z-index: 10;
+
+  background-color: transparent;
+
 }
+
+
+
