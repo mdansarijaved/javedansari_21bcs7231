@@ -20,7 +20,7 @@ pnpm dev
 
 ## Reflectiy
 
-Reflectify is a blogging site where you can write your blogs and share it with the world. You can login using your college uid and use password and xyz
+Reflectify is a blogging site where you can write your blogs and share it with the world. You can login using your college uid and use password as xyz
 
 ## Features
 
