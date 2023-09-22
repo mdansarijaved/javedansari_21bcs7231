@@ -101,6 +101,19 @@ textarea#blog-textarea {
     font-weight: 500;
 }
 
+/* Media query for tablets (768px - 991px) */
+@media screen and (max-width: 991px) {
+    .createTag {
+        display: none; /* Hide on tablets */
+    }
+}
+
+/* Media query for mobile screens (up to 767px) */
+@media screen and (max-width: 767px) {
+    .createTag {
+        display: none; /* Hide on mobile */
+    }
+}
 .logo{
     font-size: 30px;
 }
