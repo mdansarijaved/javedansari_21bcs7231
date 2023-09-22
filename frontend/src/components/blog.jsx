@@ -3,7 +3,8 @@ import ReactMarkdown from "react-markdown";
 import styles from "./blogcontent.module.css";
 import { ThumbsUp, ThumbsDown } from "lucide-react";
 import Image from "next/image";
-const Blog = ({ title, content, uid }) => {
+const Blog = ({ blog }) => {
+  const { title, content, uid } = blog;
   const time = new Date().getDate();
   return (
     <div className={styles.main}>

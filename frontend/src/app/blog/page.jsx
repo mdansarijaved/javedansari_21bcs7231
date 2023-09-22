@@ -14,8 +14,8 @@ export default function Blogs() {
     // Assuming 'blogs' is an array of posts, map over it to render each post
     return (
         <div className={styles.main}>
-            {blogs.map((post) => (
-                <Blog key={post.id} title={post.title} content={post.content} uid={post.create_by} />
+            {blogs.map((blog) => (
+                <Blog blog={blog}/>
             ))}
         </div>
     )
