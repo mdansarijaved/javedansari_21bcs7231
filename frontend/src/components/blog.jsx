@@ -3,6 +3,8 @@ import ReactMarkdown from "react-markdown";
 import styles from "./blogcontent.module.css";
 import CreatedBy from "./CreatedBy";
 import Link from "next/link";
+import remarkGfm from 'remark-gfm'
+import Markdown from "./Markdown";
 const Blog = ({ blog }) => {
   const { title, content, create_by: uid } = blog;
 
@@ -13,7 +15,9 @@ const Blog = ({ blog }) => {
         <Link href={`/blog/${blog.id}`}>
           <h1 className={styles.tittle}>{title}</h1>
         </Link>
-        <ReactMarkdown className={styles.content}>{content}</ReactMarkdown>
+        <Markdown>
+          {content}
+        </Markdown>
       </div>
     </div>
   );

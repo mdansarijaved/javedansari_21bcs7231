@@ -1,81 +1,83 @@
-*{
-    margin: 0;
-    padding: 0;
-    color: white;
-    background-color: #121318;
-    text-decoration: none;
+.container {
+    width: clamp(200px, 70%, 600px);
+    padding: 2rem;
 }
 
-.blog-create__container {
-    padding-inline: 6rem;
-    padding-block: 2rem;
-}
-
-.form-handle{
+.form-handle {
     height: 100%;
     width: 100%;
-   
+
 }
 
-
-.navCreate{
+.navCreate {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
+
 }
-textarea#blog-titlearea::placeholder{
+
+.blog-titlearea::placeholder {
     font-size: 3rem;
     font-weight: 500;
 }
 
-input#blog-titlearea {
+.blog-titlearea {
     width: 100%;
     outline: none;
     height: 100px;
     resize: none;
-    margin: 40px  0px 20px 0px; /* Prevent resizing of textarea */
+    margin: 40px 0px 20px 0px;
+    /* Prevent resizing of textarea */
     border: 2px solid gray;
-    padding: 20px; /* Add padding to textarea */
-    box-sizing: border-box; /* Include padding in the total height */
-    font-size: 3rem; /* Adjust the font size as needed */
+    padding: 20px;
+    /* Add padding to textarea */
+    box-sizing: border-box;
+    /* Include padding in the total height */
+    font-size: 3rem;
+    /* Adjust the font size as needed */
     font-weight: 300;
-    font-family: Arial, sans-serif; /* Use a suitable font-family */
+    font-family: Arial, sans-serif;
+    /* Use a suitable font-family */
 }
-textarea#blog-textarea {
+
+.blog-textarea {
     width: 100%;
     outline: none;
     height: 500px;
     font-size: 1.2rem;
     resize: none;
-    margin-block: 20px; /* Prevent resizing of textarea */
+    margin-block: 20px;
+    /* Prevent resizing of textarea */
     border: 2px solid gray;
-    padding: 20px; /* Add padding to textarea */
-    box-sizing: border-box; /* Include padding in the total height */
-    font-size: 16px; /* Adjust the font size as needed */
-    font-family: Arial, sans-serif; /* Use a suitable font-family */
+    padding: 20px;
+    /* Add padding to textarea */
+    box-sizing: border-box;
+    /* Include padding in the total height */
+    font-size: 16px;
+    /* Adjust the font size as needed */
+    font-family: Arial, sans-serif;
+    /* Use a suitable font-family */
 }
 
-.Markdown-Div{
-    margin: 30px;
-}
 
-.buttons{
+.buttons {
     display: flex;
     gap: 20px;
     align-items: center;
 }
+
 .blogButton,
 .previewButton {
-  padding: 10px 20px;
-}
-.blogButton:hover,
-.previewButton:hover {
-  background-color: #ca086a; 
-  transition: background-color 0.2s; 
+    padding: 10px 20px;
 }
 
-.blogButton{
+.blogButton:hover,
+.previewButton:hover {
+    background-color: #ca086a;
+    transition: background-color 0.2s;
+}
+
+.blogButton {
     background-color: #c70880;
     color: white;
     border: none;
@@ -84,10 +86,10 @@ textarea#blog-textarea {
     padding: 10px 0;
     cursor: pointer;
     font-size: 16px;
-  
+
 }
 
-.previewButton{
+.previewButton {
     background-color: #c70880;
 }
 
@@ -96,9 +98,13 @@ textarea#blog-textarea {
     outline: 2px solid #c70880;
 }
 
-.createTag{
+.createTag {
     font-size: 20px;
     font-weight: 500;
+}
+
+.logo {
+    font-size: 30px;
 }
 
 /* Media query for tablets (768px - 991px) */
@@ -114,7 +120,3 @@ textarea#blog-textarea {
         display: none; /* Hide on mobile */
     }
 }
-.logo{
-    font-size: 30px;
-}
-
