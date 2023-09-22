@@ -5,9 +5,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className={"main"}>
-      <section className="hero-section">
-        <Nav />
+    <>
         <div className="landing-1">
           <Card
             Title={"lorem ipsum"}
@@ -109,7 +107,6 @@ export default function Home() {
           <Image src={'/images/16.svg'} width={200} height={200} alt="svg" className="rotate-svg" />
           </div>
         </div>
-      </section>
-    </main>
+    </>
   );
 }
