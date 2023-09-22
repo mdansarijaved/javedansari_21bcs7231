@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from './blogcontent.module.css';
+import BlogMenu from "./BlogMenu";
 
 const CreatedBy = ({ uid }) => {
 
@@ -9,14 +10,20 @@ const CreatedBy = ({ uid }) => {
   return (
     <div className={styles.profile}>
 
+      <div className={styles.profilelist}>
       <div className={styles.imagediv}>
         <div style={{ backgroundColor: `#${stringToSixDigitNumber(uid)}`, width: '100%', height: '100%' }}>
 
         </div>
       </div>
+
       <span className={styles.uid}>{uid} </span>
       <span className={styles.dot}></span>
       <span className={styles.date}>{day}/{month}/{year}</span>
+      </div>
+      <div>
+        <BlogMenu/>
+      </div>
     </div>
   );
 }
