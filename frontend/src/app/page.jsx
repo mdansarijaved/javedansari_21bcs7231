@@ -103,7 +103,7 @@ export default function Home() {
         <div className="anotherdiv">
           <div className="svg-container">
             <div className="text-svg-container">
-            <h3 className="">Let the world know your story.</h3>
+            <h3 className="text">Let the world know your story.</h3>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum cupiditate eveniet nam esse autem, aliquam suscipit</p>
             </div>
           <Image src={'/images/16.svg'} width={200} height={200} alt="svg" className="rotate-svg" />
