@@ -10,7 +10,11 @@ export default function BlogMenu({ blog }) {
 
     return (
         <div className="blog__menu">
-            <button className="menu__button" onClick={() => setShowDropdown(!showDropdown)}>
+            <button className="menu__button" onClick={(e) => {
+                e.stopPropagation();
+                e.preventDefault();
+                setShowDropdown(!showDropdown)
+            }}>
                 <li></li>
                 <li></li>
                 <li></li>
