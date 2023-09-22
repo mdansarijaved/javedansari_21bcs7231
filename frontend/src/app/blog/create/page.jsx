@@ -43,7 +43,7 @@ const BlogCreate = () => {
   }
 
   return (
-    <div className="main">
+    <div className="blog-create__container">
       <nav className="navCreate">
         <h1 className="logo">YourBlog</h1>
         <h2 className="createTag">Wrtie your story.</h2>
