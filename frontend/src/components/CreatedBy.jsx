@@ -2,11 +2,14 @@ import Image from "next/image";
 import styles from './blogcontent.module.css';
 import BlogMenu from "./BlogMenu";
 
-const CreatedBy = ({ uid }) => {
+const CreatedBy = ({ blog }) => {
+  const { create_by: uid, create_time: time } = blog;
 
-  let day = new Date().getUTCDate();
-  let month = new Date().getUTCMonth();
-  let year = new Date().getUTCFullYear();
+  const date = new Date(time);
+
+  let day = date.getUTCDate();
+  let month = date.getUTCMonth();
+  let year = date.getUTCFullYear();
   return (
     <div className={styles.profile}>
 

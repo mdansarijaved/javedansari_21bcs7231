@@ -10,7 +10,7 @@ const Blog = ({ blog }) => {
 
   return (
     <div className={styles.main}>
-      <CreatedBy uid={uid} />
+      <CreatedBy blog={blog} />
       <div className={styles.blogbody}>
         <Link href={`/blog/${blog.id}`}>
           <h1 className={styles.tittle}>{title}</h1>

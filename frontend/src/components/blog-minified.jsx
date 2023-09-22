@@ -5,7 +5,7 @@ import styles from './blog-minified.module.css'
 const BlogMinified = ({ blog }) => {
   return (
     <a className={styles["card"]} href={`/blog/${blog.id}`}>
-      <CreatedBy uid={blog.create_by} />
+      <CreatedBy blog={blog} />
       <h1 className={styles["card-tittle"]}>
         {blog.title}
       </h1>
