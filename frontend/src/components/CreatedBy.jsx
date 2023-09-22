@@ -27,7 +27,7 @@ const CreatedBy = ({ blog }) => {
       <span className={styles.date}>{day}/{month}/{year}</span>
       </div>
       <div>
-        {uid === user.uid && 
+        {uid.toUpperCase() === user.uid && 
           <BlogMenu blog={blog}/>
         }
       </div>

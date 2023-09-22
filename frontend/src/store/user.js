@@ -14,7 +14,7 @@ const userSlice = createSlice({
       if (!checkPassword(action.payload.password)) return setError(state, 'PASSWORD_MISMATCH');
       if (!validateUID(action.payload.uid)) return setError(state, 'INVALID_UID');
 
-      state.uid = action.payload.uid;
+      state.uid = action.payload.uid.toUpperCase();
       state.error = null;
     },
     logout(state) {
