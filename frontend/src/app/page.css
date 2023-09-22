@@ -1,23 +1,16 @@
-.blogText {
-  padding-top: 15px;
-}
+
 
 .blogText .blogparaText {
-  margin-bottom: 20px;
+  background-color: transparent;
+
 }
 
 .blogText {
+  
   margin-top: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #121318;
+  overflow: hidden;
+  padding: 10px;
 }
 
-.blogparaText {
-  padding: 20px;
-}
-
-.blogparaText p {
-  margin: 10px 0;
-}

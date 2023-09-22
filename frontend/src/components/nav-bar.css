@@ -134,6 +134,16 @@ ol {
   align-items: flex-start;
   gap: 60px;
 }
+.text2{
+
+  background-color: #c70880;
+  padding-inline: 20px;
+  padding-block: 10px;
+  border-radius: 10px;
+  color: white;
+  animation: colorchangeButton 100s infinite alternate;
+  cursor: pointer;
+}
 
 @keyframes colorchangeButton {
   0% {
@@ -201,6 +211,7 @@ ol {
   animation: colorchange 100s infinite alternate;
 
 }
+
 
 @keyframes colorchange {
   0% {
@@ -282,6 +293,7 @@ ol {
 
 .svg-container {
   border: 1px solid gray;
+  background-color: transparent;
   display: flex;
   padding: 10px;
   justify-content: center;
@@ -296,6 +308,7 @@ ol {
 }
 
 .text-svg-container{
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -304,9 +317,11 @@ ol {
 }
 
 .text-svg-container h3 {
+  background-color: transparent;
   font-size: 2rem;
 }
 .text-svg-container p {
+  background-color: transparent;
   font-size: 0.8rem;
 }
 
