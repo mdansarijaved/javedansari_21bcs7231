@@ -2,12 +2,12 @@
 import React, { useRef, useEffect, useState } from 'react'
 import './login.css'
 import { useDispatch, useSelector } from 'react-redux';
-import { login } from '@/store/user';
+import { login, useUser } from '@/store/user';
 import { useRouter } from 'next/navigation';
 
 const page = () => {
   const [newlySubmitted, setNewlySubmitted] = useState(false);
-  const user = useSelector((state) => state.user)
+  const user = useUser();
   const dispatch = useDispatch();
   const router = useRouter();
   const uidRef = useRef()

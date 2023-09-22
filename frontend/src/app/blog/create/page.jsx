@@ -6,11 +6,12 @@ import ReactMarkdown from "react-markdown";
 import { useAddPostsMutation } from "@/store/posts";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/navigation";
+import { useUser } from "@/store/user";
 
 const BlogCreate = () => {
   const router = useRouter();
   const [addPost] = useAddPostsMutation();
-  const user = useSelector((state) => state.user);
+  const user = useUser();
   const [markdownDisplay, setMarkdownDisplay] = useState("");
   const [showPreview, setShowPreview] = useState(false);
 

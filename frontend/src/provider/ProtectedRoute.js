@@ -1,8 +1,9 @@
+import { useUser } from "@/store/user";
 import { useRouter } from "next/navigation";
 import { useSelector } from "react-redux";
 
 export default function ProtectedRoute ({ children }) {
-    const user = useSelector((state) => state.user); // Replace with your Redux state selector
+    const user = useUser(); // Replace with your Redux state selector
     const router = useRouter();
   
     // Check if user data exists

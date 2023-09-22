@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
+import { useSelector } from 'react-redux';
 
 const initialState = { 
     uid: null,
@@ -37,4 +38,7 @@ function validateUID(uid) {
 }
 
 export const { login, logout } = userSlice.actions
+export const useUser = () => {
+  return useSelector(state => state.user)
+}
 export default userSlice.reducer
