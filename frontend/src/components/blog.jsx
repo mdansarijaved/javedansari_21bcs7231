@@ -5,7 +5,6 @@ import { ThumbsUp, ThumbsDown } from "lucide-react";
 import Image from "next/image";
 const Blog = ({ blog }) => {
   const { title, content, create_by: uid } = blog;
-  console.log(blog)
   const time = new Date().getDate();
   return (
     <div className={styles.main}>

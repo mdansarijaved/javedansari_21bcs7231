@@ -1,7 +1,6 @@
 import React from 'react'
 
 const BlogMinified = ({ blog }) => {
-  console.log(blog)
   return (
     <a className="card" href={`/blog/${blog.id}`}>
       <h1 className="card-tittle">

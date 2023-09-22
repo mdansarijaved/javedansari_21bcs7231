@@ -9,13 +9,15 @@ export default function Blogs() {
     const { data: blogs, isLoading } = useGetPostsQuery();
     
     if (isLoading) return <div>Loading...</div>
-    console.log(blogs)
 
     // Assuming 'blogs' is an array of posts, map over it to render each post
     return (
         <div className={styles.main}>
             {blogs.map((blog) => (
-                <Blog blog={blog}/>
+                <Blog
+                    key={blog.id} 
+                    blog={blog}
+                />
             ))}
         </div>
     )

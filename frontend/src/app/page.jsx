@@ -13,7 +13,7 @@ export default function Home() {
         <div className="landing-1">
           {blogs.map(blog => (
             <BlogMinified 
-              id={blog.id}
+              key={blog.id}
               blog={blog}
             />
           ))}
