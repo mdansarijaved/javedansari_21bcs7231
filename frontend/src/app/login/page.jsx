@@ -38,7 +38,7 @@ const page = () => {
             Sign in to your account
           </p>
           <div className="inputdiv">
-            <input type="text" placeholder="UID" className="input" ref={uidRef} defaultValue={'21BCS1353'}/>
+            <input type="text" placeholder="UID" className="input" ref={uidRef} defaultValue={'21BCS1743'}/>
           </div>
           <div className="inputdiv">
             <input type="password" placeholder="Password. (Hint - xyz)" className="input" ref={passwordRef} defaultValue={'xyz'}/>
