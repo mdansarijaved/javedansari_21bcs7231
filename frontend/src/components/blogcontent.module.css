@@ -6,7 +6,7 @@
     color: white;
     text-decoration: none;
     height: fit-content;
-    width: 600px;
+    width: clamp(200px, 100%, 800px);
 }
 
 .content {

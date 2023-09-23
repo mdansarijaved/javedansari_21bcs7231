@@ -130,7 +130,7 @@ ol {
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 150px 0px 0px 50px;
+  padding-top: 150px;
   align-items: flex-start;
   gap: 60px;
 }
