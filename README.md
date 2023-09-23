@@ -30,9 +30,18 @@ Reflectify is a blogging site where you can write your blogs and share it with t
 
 ## Tech Stack
 
-**Client:** Next.js, Css, lucide-react 
+**Client:** 
+- React.js
+- Next.js
+- CSS
+- Redux Toolkit (State management) 
+- Vercel (Deployment)
 
-**Server:** Python , django, django rest framework, django rest knox
+**Server:** 
+- Python 
+- Django
+- Django rest framework
+- Railway.app (Deployment)
 
 ## Run Locally
 

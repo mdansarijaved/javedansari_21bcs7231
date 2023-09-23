@@ -1,4 +1,5 @@
 ## Setup
+- Have `Pip` and `Python` installed in your machine
 
 - Create a virtual environment for your Python project. A virtual environment is a self-contained environment that allows you to isolate your project dependencies and avoid conflicts with other projects. Learn more here.
 - Install the Python virtualenv package using the command 
@@ -21,4 +22,15 @@ venv/bin/activate
 - Install the project dependencies by running the command 
 ```
 pip install -r requirements.txt
+```
+- Set up the database by running the commands 
+```
+python manage.py makemigrations
+```
+```
+python manage.py migrate
+```
+- Finally, start the development server by running the command 
+```
+python manage.py runserver
 ```
