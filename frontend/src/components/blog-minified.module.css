@@ -1,13 +1,12 @@
 .card {
     font-size: 3rem;
     border: 2px solid gray;
-    width: 100%;
-    min-width: 300px;
+    width: clamp(200px, 90%, 500px);
     padding: 20px;
     border-radius: 20px;
 }
 
-.card-tittle {
+.card-title {
     font-size: 1.3rem;
     font-weight: 300;
     margin-top: 10px;
@@ -17,25 +16,14 @@
     font-size: 1rem;
     font-weight: 300;
   }
-  
-
-@media screen and (max-width: 1000px) {
-    .card {
-        font-size: 3rem;
-        /* Adjust font size for tablets */
-        width: 400px;
-        /* Adjust width for tablets */
-    }
-}
 
 /* Media query for mobile screens (up to 767px) */
 @media screen and (max-width: 800px) {
     .card {
-        font-size: 1.5rem;
-        /* Adjust font size for mobile */
-        width: 300px;
-        /* Adjust width for mobile */
-        padding: 10px;
-        /* Adjust padding for mobile */
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
     }
 }
