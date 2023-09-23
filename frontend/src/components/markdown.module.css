@@ -43,3 +43,10 @@
     margin-right: 0;
     padding-left: 30px;
 }
+
+.markdown pre {
+    background-color: #161b22;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
